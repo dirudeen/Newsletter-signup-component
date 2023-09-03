@@ -17,6 +17,7 @@ body {
   @apply text-slate-800;
   margin: 0;
   min-width: 100wv;
+  min-height: 100vh
 }
 
 
