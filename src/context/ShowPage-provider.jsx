@@ -3,7 +3,6 @@ import Context from "./context";
 import { useReducer } from "react";
 
 function reducer(state, action) {
-
   if (action.type === "Success") {
     return {
       ...state.showSuccessPage,
