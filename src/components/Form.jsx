@@ -1,15 +1,16 @@
-import { useCallback, useState } from "react";
+import { useCallback, useState, useContext } from "react";
+import Context from "../context/context";
 
 const Form = () => {
   const [enteredEmail, setEnteredEmail] = useState("");
   const [isTouched, setIsTouched] = useState(false);
+  const { dispatch } = useContext(Context);
 
   let isValid = enteredEmail.trim().includes("@");
 
   const inputChangeHandler = (event) => {
     setEnteredEmail(event.target.value);
   };
-
 
   const inputBlurHandler = useCallback(() => {
     setIsTouched(true);
@@ -21,14 +22,17 @@ const Form = () => {
     if (!isValid) {
       return;
     }
+    console.log("working");
+    dispatch({ type: "Success" });
 
     setIsTouched(false);
     setEnteredEmail("");
   };
 
-  const errorClass = isTouched && !isValid 
-    ? " border-red-400 bg-red-100 placeholder:text-red-400"
-    : " border-slate-400 focus:border-slate-600 focus:border-[1.5px]";
+  const errorClass =
+    isTouched && !isValid
+      ? " border-red-400 bg-red-100 placeholder:text-red-400"
+      : " border-slate-400 focus:border-slate-600 focus:border-[1.5px]";
 
   return (
     <form onSubmit={submitFormHandler}>
