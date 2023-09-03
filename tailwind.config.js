@@ -15,6 +15,10 @@ export default {
           800: "#242742",
         },
       },
+      backgroundImage: {
+        hoverClr:
+          "linear-gradient(90deg, hsla(336, 100%, 65%, 1) 5%, hsla(9, 100%, 64%, 1) 70%);",
+      },
     },
   },
   plugins: [],
