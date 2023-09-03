@@ -19,8 +19,8 @@ function App() {
       </section>
 
       <section className="p-6">
-        <h1 className="text-4xl font-bold my-4">Stay updated!</h1>
-        <p className="mb-4">
+        <h1 className="text-4xl font-bold my-5">Stay updated!</h1>
+        <p className="mb-6">
           Join 60,000+ product managers receiving monthly updates on:
         </p>
         <div className="flex gap-4 mb-3 ">
