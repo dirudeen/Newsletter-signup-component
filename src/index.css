@@ -3,13 +3,20 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
 
 body {
   @apply font-Roboto;
   @apply bg-secondary-600;
+  @apply text-slate-800;
   margin: 0;
   min-width: 100wv;
-  min-height: 100vh;
 }
 
 
