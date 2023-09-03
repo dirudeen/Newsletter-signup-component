@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import iconSuccess from "../assets/images/icon-success.svg";
-import Context from "../context/context";
+import ShowPageContext from "../context/ShowPage-context";
 
 
 const SuccessfulSub = () => {
-  const { dispatch } = useContext(Context);
+  const { dispatch } = useContext(ShowPageContext);
 const dismisMessageHandler = () => {
   return dispatch({type: 'Done'})
 }

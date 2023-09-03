@@ -2,11 +2,10 @@ import Card from "./components/UI/Card";
 import Subscription from "./components/Subscription";
 import SuccessfulSub from "./components/SuccessfulSub";
 import { useContext } from "react";
-import Context from "./context/context";
+import ShowPageContext from "./context/ShowPage-context";
 
 function App() {
-  const {showSuccessPage} = useContext(Context)
-  console.log(showSuccessPage)
+  const {showSuccessPage} = useContext(ShowPageContext)
   return (
       <Card>
         {showSuccessPage ? <SuccessfulSub /> : <Subscription />}

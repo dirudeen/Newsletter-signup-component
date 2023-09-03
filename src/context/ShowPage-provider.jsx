@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import Context from "./context";
+import ShowPageContext from "./ShowPage-context";
 import { useReducer } from "react";
 
 function reducer(state, action) {
@@ -27,11 +27,11 @@ const ShowPageProvider = (props) => {
     showSuccessPage: false,
   });
   return (
-    <Context.Provider
+    <ShowPageContext.Provider
       value={{ showSuccessPage: state.showSuccessPage, dispatch }}
     >
       {props.children}
-    </Context.Provider>
+    </ShowPageContext.Provider>
   );
 };
 

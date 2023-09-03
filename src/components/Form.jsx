@@ -1,10 +1,10 @@
 import { useCallback, useState, useContext } from "react";
-import Context from "../context/context";
+import ShowPageContext from "../context/ShowPage-context";
 
 const Form = () => {
   const [enteredEmail, setEnteredEmail] = useState("");
   const [isTouched, setIsTouched] = useState(false);
-  const { dispatch } = useContext(Context);
+  const { dispatch } = useContext(ShowPageContext);
 
   let isValid = enteredEmail.trim().includes("@");
 
