@@ -23,7 +23,7 @@ const Form = () => {
       return;
     }
     console.log("working");
-    dispatch({ type: "Success" });
+    dispatch({ type: "Success", enteredEmail });
 
     setIsTouched(false);
     setEnteredEmail("");
