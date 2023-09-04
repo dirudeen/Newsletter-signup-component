@@ -19,6 +19,9 @@ export default {
         hoverClr:
           "linear-gradient(90deg, hsla(336, 100%, 65%, 1) 5%, hsla(9, 100%, 64%, 1) 70%);",
       },
+      fontSize: {
+        clamp: "clamp(2.5rem, 5vw, 3.5rem)",
+      },
     },
   },
   plugins: [],
