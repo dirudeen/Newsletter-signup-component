@@ -1,6 +1,6 @@
 import Form from "./Form";
 import mobileImg from "../assets/images/illustration-sign-up-mobile.svg";
-import desktopImg from "../assets/images//illustration-sign-up-desktop.svg";
+import desktopImg from "../assets/images/illustration-sign-up-desktop.svg";
 import icon from "../assets/images/icon-list.svg";
 
 
@@ -8,8 +8,12 @@ const Subscription = () => {
   return (
     <>
       <section>
-        <div>
-          <img src={mobileImg} className="md:hidden " alt="sign up image" />
+        <div className="block h-full">
+          <img
+            src={mobileImg}
+            className="md:hidden w-full block"
+            alt="sign up image"
+          />
           <img
             src={desktopImg}
             className="hidden md:block"
@@ -18,8 +22,8 @@ const Subscription = () => {
         </div>
       </section>
 
-      <section className="p-6">
-        <h1 className="text-4xl font-bold my-5">Stay updated!</h1>
+      <section className="p-6 flex-1 flex md:justify-center flex-col md:px-6 md:w-[26rem]" >
+        <h1 className="text-clamp md:mb-8  font-bold  my-5">Stay updated!</h1>
         <p className="mb-6">
           Join 60,000+ product managers receiving monthly updates on:
         </p>
