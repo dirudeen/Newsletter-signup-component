@@ -9,25 +9,12 @@
   } 
 }
 
-/* html {
-  box-sizing: border-box;
-}
-
-*, *::before, *::after {
-  box-sizing: inherit;
-} */
-
 body {
-  @apply font-Roboto;
-  @apply bg-secondary-600;
-  @apply text-slate-800;
+  @apply font-Roboto bg-secondary-600 text-slate-800;
+  @apply md:flex md:justify-center md:items-center;
   margin: 0;
   min-width: 100wv;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
 }
 
 
