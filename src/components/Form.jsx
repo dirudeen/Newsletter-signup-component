@@ -35,7 +35,7 @@ const Form = () => {
       : " border-slate-400 focus:border-slate-600 focus:border-[1.5px]";
 
   return (
-    <form onSubmit={submitFormHandler}>
+    <form onSubmit={submitFormHandler}className="mb-10 md:mb-0">
       <div className=" mb-6">
         <div className="flex justify-between mb-2">
           <label htmlFor="email" className="font-bold text-sm">
