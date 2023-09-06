@@ -57,11 +57,11 @@ const Form = () => {
           onChange={inputChangeHandler}
         />
       </div>
-      <button className="w-full text-center text-secondary-100 p-4 bg-secondary-800 rounded-lg hover:bg-hoverClr ">
+      <button className="w-full text-center text-secondary-100 p-4 bg-secondary-800 rounded-lg  relative overflow-hidden before:absolute before:bg-green-700 before:z-[-1] before:inset-0 before:orign-left hover:before:z-10 ">
         Subscribe to monthly newsletter
       </button>
     </form>
   );
 };
-
+// hover: bg - hoverClr;
 export default Form;
