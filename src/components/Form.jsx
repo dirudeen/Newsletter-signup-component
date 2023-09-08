@@ -57,7 +57,7 @@ const Form = () => {
           onChange={inputChangeHandler}
         />
       </div>
-      <button className="w-full text-center text-secondary-100 p-4 bg-secondary-800 rounded-lg  relative overflow-hidden before:absolute before:bg-green-700 before:z-[-1] before:inset-0 before:orign-left hover:before:z-10 ">
+      <button className="w-full text-center text-secondary-100 p-4 bg-secondary-800 rounded-lg z-10 relative overflow-hidden before:absolute before:z-[-1] before:bg-hoverClr before:inset-0 before:transform before:origin-right before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100 hover:before:origin-left">
         Subscribe to monthly newsletter
       </button>
     </form>
