@@ -1,4 +1,4 @@
-import { useCallback, useState, useContext } from "react";
+import { useCallback, useState, useContext, useRef } from "react";
 import ShowPageContext from "../context/ShowPage-context";
 
 const Form = () => {
@@ -6,7 +6,10 @@ const Form = () => {
   const [isTouched, setIsTouched] = useState(false);
   const { dispatch } = useContext(ShowPageContext);
 
-  let isValid = enteredEmail.trim().includes("@");
+  const isValid = enteredEmail.trim().includes("@");
+  const hasError = isTouched && !isValid;
+
+  const inputRef = useRef()
 
   const inputChangeHandler = (event) => {
     setEnteredEmail(event.target.value);
@@ -19,9 +22,13 @@ const Form = () => {
   const submitFormHandler = (event) => {
     event.preventDefault();
 
-    if (!isValid) {
-      return;
+    if (!isValid && !isTouched) {
+      inputRef.current.focus()
+      return 
     }
+
+    if(!isValid) return;
+    
     console.log("working");
     dispatch({ type: "Success", enteredEmail });
 
@@ -30,7 +37,7 @@ const Form = () => {
   };
 
   const errorClass =
-    isTouched && !isValid
+    hasError
       ? " border-red-400 bg-red-100 placeholder:text-red-400"
       : " border-slate-400 focus:border-slate-600 focus:border-[1.5px]";
 
@@ -41,7 +48,7 @@ const Form = () => {
           <label htmlFor="email" className="font-bold text-sm">
             Email address
           </label>
-          {isTouched && !isValid && (
+          {hasError && (
             <p className="text-primary-400 text-sm font-bold">
               Valid Email required
             </p>
@@ -55,6 +62,7 @@ const Form = () => {
           placeholder="email@company.com"
           onBlur={inputBlurHandler}
           onChange={inputChangeHandler}
+          ref={inputRef}
         />
       </div>
       <button className="w-full text-center text-secondary-100 p-4 bg-secondary-800 rounded-lg z-10 relative overflow-hidden before:absolute before:z-[-1] before:bg-hoverClr before:inset-0 before:transform before:origin-right before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100 hover:before:origin-left">
