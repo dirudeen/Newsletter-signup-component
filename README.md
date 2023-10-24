@@ -18,6 +18,8 @@ This is a solution to the [Newsletter sign-up form with success message challeng
 
 ## Overview
 
+The Newsletter Sign-up Component is a React-based web application that provides a simple and user-friendly interface for users to subscribe to a newsletter and if successful, The user will be sent to Success webpage. It aims to keep users informed and engaged with regular updates on various topics related to product management.
+
 ### The challenge
 
 Users should be able to:
