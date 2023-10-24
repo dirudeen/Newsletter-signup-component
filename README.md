@@ -38,7 +38,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/dirudeen/Newsletter-signup-component)
-- Live Site URL: [Vercel](https://your-live-site-url.com)
+- Live Site URL: [Vercel](https://newsletter-signup-component-rho.vercel.app/)
 
 
 ### Built with
