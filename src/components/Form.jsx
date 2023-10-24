@@ -1,4 +1,4 @@
-import { useCallback, useState, useContext, useRef } from "react";
+import { useState, useContext, useRef } from "react";
 import ShowPageContext from "../context/ShowPage-context";
 
 const Form = () => {
@@ -15,9 +15,9 @@ const Form = () => {
     setEnteredEmail(event.target.value);
   };
 
-  const inputBlurHandler = useCallback(() => {
+  const inputBlurHandler = () => {
     setIsTouched(true);
-  }, []);
+  };
 
   const submitFormHandler = (event) => {
     event.preventDefault();
@@ -29,7 +29,6 @@ const Form = () => {
 
     if(!isValid) return;
     
-    console.log("working");
     dispatch({ type: "Success", enteredEmail });
 
     setIsTouched(false);
@@ -71,5 +70,5 @@ const Form = () => {
     </form>
   );
 };
-// hover: bg - hoverClr;
+
 export default Form;
