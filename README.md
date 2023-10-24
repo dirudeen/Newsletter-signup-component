@@ -8,7 +8,6 @@ This is a solution to the [Newsletter sign-up form with success message challeng
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
@@ -33,7 +32,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./src/assets/Screenshot.png)
 
 
 ### Links
@@ -41,7 +40,6 @@ Users should be able to:
 - Solution URL: [Github](https://github.com/dirudeen/Newsletter-signup-component)
 - Live Site URL: [Vercel](https://your-live-site-url.com)
 
-## My process
 
 ### Built with
 
